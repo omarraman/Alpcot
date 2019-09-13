@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Styles
+{
+    <style type="text/css">
+        div.order {
+            width: 20%;
+            margin: 10px;
+            display: inline-block
+        }
+
+        div.trades {
+            width: 30%;
+            margin: 10px;
+
+            display: inline-block;
+        }
+
+        div.orders {
+            width: 30%;
+            margin: 10px;
+
+            display: inline-block;
+        }
+
+        div.executeButton {
+            margin-top: 10px;
+        }
+    </style>
+}
+
+
+
+<div class="order">
+    <h4>Execute Buy Order</h4>
+    <div id="buyOrderStocksDropDown"></div>
+    Price <div id="buyOrderPrice"></div>
+    Quantity <div id="buyOrderQuantity"></div>
+    <div class="executeButton" id="buyOrderExecute"></div>
+</div>
+
+<div class="order">
+    <h4>Execute Sell Order</h4>
+    <div id="sellOrderStocksDropDown"></div>
+    Price<div id="sellOrderPrice"></div>
+    Quantity<div id="sellOrderQuantity"></div>
+    <div class="executeButton" id="sellOrderExecute"></div>
+
+</div>
+
+<div>
+    <div class="orders">
+        <h4>Buy Orders</h4>
+        <div id="buyOrdersGrid"></div>
+    </div>
+    <div class="orders">
+        <h4>Sell Orders</h4>
+        <div id="sellOrdersGrid"></div>
+    </div>
+
+    <div class="trades">
+        <h4>Trades Executed</h4>
+        <div id="tradesGrid"></div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="@Url.Content("/scripts/Dashboard.js")"></script>
